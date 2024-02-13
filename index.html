@@ -12,6 +12,7 @@
 
 <body class="m-8">
     <header>
+        <span id=”balance”></span>
 
     </header>
     <main>
@@ -24,39 +25,61 @@
                     <figure><img src="images/triangle.png" alt="" /></figure>
                     <div class="card-body">
                         <h2 class="card-title ">Triangle</h2>
-                        <p class="text-center">Area = 0.5 X b X h</p>
+                        <p class="text-center text-3xl">Area = 0.5 X b X h</p>
                         <div>
                             <input id="triangle-base" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="b">
                             <span class="mr-4 ml-2">cm</span>
-                            <input id="triangle-height" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="h">
+                            <input id="triangle-height" class="w-24 text-2xl p-2 rounded-sm" type="text"
+                                placeholder="h">
                             <span class="mr-4 ml-2">cm</span>
+                        </div>
+                        <div>
+                            <p class="text-2xl">Area: <span id="triangle-area"></span><span>cm<sup>2</sup></span></p>
                         </div>
                         <div class="card-actions ">
                             <button onclick="calculateTriangleArea()" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
-                <!-- triangle calculation -->
+                <!-- Rectangle calculation -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                            alt="Shoes" /></figure>
+                    <figure><img src="images/rectangle.png" alt="" /></figure>
                     <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title">Rectangle</h2>
+                        <p>Area (A) = l X w </p>
+                        <div class="flex">
+                            <input type="text" id="" placeholder="length" class="w-24 text-2xl p-2 rounded-sm"> <span
+                                class="mr-4 ml-2">cm</span>
+                            <input type="text" id="" placeholder="width" class="w-24 text-2xl p-2 rounded-sm"> <span
+                                class="mr-4 ml-2">cm</span>
+                        </div>
+                        <div>
+                            <p class="text-2xl">Area: <span id="triangle-area"></span><span>cm<sup>2</sup></span></p>
+                        </div>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
+                            <button class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
-                <!-- triangle calculation -->
+                <!-- parallelogram calculation -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                            alt="Shoes" /></figure>
+                    <figure><img src="images/parallelogram.png" alt="" /></figure>
                     <div class="card-body">
-                        <h2 class="card-title">Shoes!</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <h2 class="card-title">Parallelogram</h2>
+                        <p>Area (A) = b X h</p>
+                        <div class="flex">
+                            <input type="text" id="parallelogram-base" placeholder="base"
+                                class="w-24 text-2xl p-2 rounded-sm"> <span class="mr-4 ml-2">cm</span>
+                            <input type="text" id="parallelogram-height" placeholder="height"
+                                class="w-24 text-2xl p-2 rounded-sm"> <span class="mr-4 ml-2">cm</span>
+                        </div>
+                        <div>
+                            <p class="text-2xl">Area: <span id="parallelogram-area"></span><span>cm<sup>2</sup></span>
+                            </p>
+                        </div>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
+                            <button onclick="calculateParallelogramArea()"
+                                class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -83,8 +106,17 @@
     </main>
     <footer>
 
+
     </footer>
     <script src="scripts/triangle-calculate.js"></script>
+    <script src="scripts/rectangle-area.js"></script>
+    <script src="scripts/parallelogram-area.js"></script>
+    <script>
+
+
+        var container = document.getElementById('container');
+        container.innerHTML = '';
+    </script>
 </body>
 
 </html>
